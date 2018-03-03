@@ -4,11 +4,11 @@ B They retained the British Crown's control over American labor. #The British Cr
 C They gave the federal government too little power. *The Articles of Confederation did not allow the federal government to enforce federal law, preside over interstate judicial disputes, levy taxes, or regulate trade.
 D They caused the South to secede from the Union. #Southern secession was caused by the election of Abraham Lincoln as the 16th president.
 
-Why did the civil war start?
-A The Republicans wanted to end slavery. #Although the republicans did want to abolish slavery, their ultimate goal of the war was not to end slavery.
-B The southern states started sending troops to kill northern troops. #The south never sent troops to the northern states
-C The southern states succeed and the north saw it as an act of treason. *The main reason that the war started was because the southern states succeeded after Lincoln was elected as president even though he had no votes from southern states. The north saw southern succession as treason and started a war to take them back.
-D The northern states were stealing money from the southern states. #Sectionalism did exist between the two areas; however, the north never actually stole money from the south
+Why did the Civil War start?
+A The Republicans wanted to end slavery. #Although the Republicans did want to abolish slavery, the Republican-dominated Union only initially invaded the Confederacy to bring them back into the Union.
+B The Southern states started sending troops to kill northern troops. #The South never sent troops to the Northern states.
+C The Southern states seceded and the north saw it as an act of treason. *The war started because the Southern states seceded after Abraham Lincoln was elected president, even though he had no votes from southern states. The North saw Southern secession as treason and started a war to take them back.
+D The Northern states were stealing money from the Southern states. #Sectionalism did exist between the two areas; however, the North never actually stole money from the South.
 
 Who was Andrew Carnegie and what did he do for America?
 A He was a political figure that had control over the steel industry. #He was not a political figure but he did have control of the steel industry.
@@ -23,10 +23,10 @@ C It was America’s duty to tame the savages of the world and educate them on h
 D America had plenty of problems at home to deal with before getting involved in the world’s problems #This was an argument made by many that opposed imperialism and meant to address the problems of racism and city problems that were occurring at the time.
 
 What is Eugenics and where did the idea originate?
-A Idea from Nazi Germany that humans could be bread like animals to have desired traits. #Eugenics did not come from Nazi Germany but it support the idea of human breeding
+A XXXWWII Idea from Nazi Germany that humans could be bread like animals to have desired traits. #Eugenics did not come from Nazi Germany but it support the idea of human breeding
 B Idea from Britain that humans could be bread like animals to have desired traits. *Eugenics originated in Britain and people believed that humans should be bred like dogs and cats.
 C Idea from America that genes could be altered in human beings. #Eugenics did not start in the US nor did they believe they could alter genes.
-D Idea from Nazi Germany that genes could be altered in human beings. #Eugenics did not start in Nazi Germany nor did they believe they could alter genes.
+D XXXWWII Idea from Nazi Germany that genes could be altered in human beings. #Eugenics did not start in Nazi Germany nor did they believe they could alter genes.
 
 Which court case ruled that slaves were property and which compromise did this decision contradict?
 A Scott vs. Sanford, 3/5th compromise. *This case ruled that slaves were not citizens and therefore could not sue. Also this contradicted the 3/5th compromise stating that a slave counts as 3/5th of a person.
@@ -35,7 +35,7 @@ C McCulloch vs. Maryland, Crittenden Compromise. #This court case did not rule s
 D Fletcher vs. Peck, Crittenden Compromise. #This court case did not rule slaves were property but the court case that did rule that slaves were property was the 3/5th compromise.
 
 Which president was heavily criticized for ruling like a king and why?
-A Franklin Roosevelt because he was in office for 4 terms. #Although FDR did serve as president for 4 terms he was not heavily criticized by the media for ruling like a king.
+A XXXWII. Franklin Roosevelt because he was in office for 4 terms. #Although FDR did serve as president for 4 terms he was not heavily criticized by the media for ruling like a king.
 B George Washington because he had so much power as one person. #George Washington was the first president and the people did not see him as a king.
 C Aaron Burr because he killed Alexander Hamilton in a duel. #Aaron Burr was never president.
 D Andrew Jackson because he was thought to abuse his presidential powers. *Jackson was even titled as “King Jackson” for vetoing so many bills.
@@ -70,8 +70,75 @@ B Radical and demanding. #They were definitely not radical in their ideas or the
 C Outspoken and needy. #They were not very outspoken and one of the presidents even had the name “Silent Cal”.
 D Peaceful and Outspoken. #They were not very outspoken and one of the presidents even had the name “Silent Cal”, they could be described as peaceful.
 
-What is laissez faire?
+What is laissez-faire?
 A The idea that business should have a say in politics. #The idea said that business and politics should not cooperate.
 B The idea that business should help the American people. #This idea is from Carnegie’s “Gospel of Wealth”.
 C The idea that politics and business should be separate. *Laissez faire was the idea that all business and politics should be separate and neither should be involved in each other.
-D The idea that politics and business should be together. # Laissez faire believed that they should not be together.
+D The idea that politics and business should be together. #Laissez faire believed that they should not be together.
+
+Which American president first issued the doctrine that European powers will be met with military force if they sought to colonize any more territory in the western hemisphere?
+A Theodore Roosevelt. #Theodore Roosevelt actually issued the Roosevelt Corollary, which added onto this pre-existing doctrine the policy that the U.S. would military intervene in any country in the Western Hemisphere to promote order.
+B Rutherford B. Hayes. #Hayes' presidency was focused on domestic affairs like civil rights reform.
+C George Washington. #Though Washington did encourage future presidents to stay away from European affairs, he did not issue any formal doctrine regarding colonialism.
+D James Monroe. *Monroe issued his Monroe Doctrine in 1823 as a safeguard against European interference in the Western Hemisphere.
+
+The American Revolution was primarily inspired by the ideas of which man?
+A Mark Twain #Mark Twain came many years after the American Revolution and is best known as the author of The Adventures of Huckleberry Finn.
+B John Locke *John Locke's idea that people have a duty to form a new government if the existing government failed to uphold their rights fueled the American Revolution.
+C Marquis de Lafayette #Though Lafayette fought in the American Revolution, he did not provide the main philosophical backing for the Revolution.
+D James K. Polk #Polk came many years after the American Revolution, being the president to wage war against Mexico.
+
+Which amendment gave African-American men the right to vote?
+A 15th Amendment. *This amendment gave African-American men the right to vote, though state laws like poll taxes sometimes obstructed them from exercising this right.
+B 14th Amendment. #This amendment gave African-Americans citizenship.
+C 13th Amendment. *This amendment abolished slavery.
+D 12th Amendment. *This amendment required electors to select a candidate for president and another candidate for vice president, instead of selecting two candidates for president.
+
+Which philosophy argued that it was justified for the rich to stay rich and the poor to stay poor?
+A Social Darwinism *This philosophy asserts that people should be divided between rich and poor as a result of survival of the fittest.
+B Social Gospel #This philosophy actually argued the opposite--that based on the biblical notions of charity, those in poverty should be uplifted.
+C Populism #This philosophy actually argued that farmers should have greater political power.
+D Nativism #This philosophy supports discrimination against immigrants.
+
+How did the Federalists convince skeptical states to ratify the Constitution?
+A They promised to abolish slavery. #The abolition of slavery was not a bargaining piece to encourage states to ratify the Constitution.
+B They promised to add a Bill of Rights. *Skeptical states were reassured that the federal government based on the Constitution couldn't trample on the rights of states and citizens.
+C They promised to elect Rutherford B. Hayes as president. #Hayes was actually elected president as a result of the Compromise of 1877, many years after the ratification of the Constitution.
+D They promised to close the United States off from immigration. #This is false, as immigration wasn't a major issue when the Constitution was being ratified.
+
+What is the Lost Generation?
+A A squadron of American Revolution soldiers that defected to the British side. #Americans that allied with the British were actually called Loyalists.
+B The wave of Americans who reached maturity during or shortly after World War I. *The generation that entered adulthood around the time of World War I were disillusioned and had lost many men to the war effort.
+C A series of books by Pythagoras that was destroyed in a fire at the Library of Alexandria. #Pythagoras'scripts were not called the Lost Generation.
+D A series of farming devices by Richard Arkwright whose designs were lost due to flooding. #Richard Arkwright's designs were never lost due to a flood.
+
+What is one of the crowning achievements of Andrew Jackson's presidency?
+A Louisiana Purchase. #The United States actually bought Louisiana from France under President Jefferson.
+B Abolition of slavery. #The amendment abolishing slavery was actually passed under President Lincoln and ratified under President Andrew Johnson.
+C Founding the League of Nations. #President Wilson actually formed the League of Nations after World War I.
+D President Jackson rejected the theory of nullification by South Carolina, threatening the use of force to enforce federal tariffs within the state. *People applauded Andrew Jackson for asserting the supremacy of the federal government over state governments.
+
+Why was President Andrew Johnson rebuked in the Era of Reconstruction?
+A He took a lenient approach to reprimanding the seceded states. *Andrew Johnson wanted to restore the union as quickly as possible and was criticized when he did not heavily penalize the seceded states.
+B He brought back slavery, against public opinion. #Slavery was never brought back in the U.S.
+C He allied with France to fight Great Britain, an important trade partner of the U.S., in the Napoleonic Wars. #The U.S. actually remained neutral in the Napoleonic Wars.
+D He appointed Richard A. Ballinger, who was speculated to make federal lands available for private use, as Secretary of the Interior. #The Pinchot-Ballinger controversy actually occured under President Taft.
+
+
+How did the French and Indian War set the foundation for the American Revolution?
+A Americans had fought in it, but were denied access to its spoils (Ohio River Valley) under the Proclamation of 1763. *Americans were upset with the British government for denying them what they had fought for.
+B The war made Native Americans slaves in the American colonies, and Americans wanted to end slavery. #The war did not make Native American slaves, and most Americans supported slavery at this time.
+C The war resulted in French control of the 13 colonies. #This is false, as the French lost the French and Indian War.
+D Americans realized that their government was too weak and sought greater support from the British Crown. #Americans actually wanted self-government without British interference.
+
+Which book fueled the abolitionist cause?
+A The Great Gatsby *This book by F. Scott Fitzgerald came after the abolition of slavery and displayed the materialism of Americans in the 1920s.
+B Common Sense *This pamphlet actually gave political and moral arguments to fuel the American Revolution.
+C Uncle Tom's Cabin *This book galvanized the abolitionist cause by displaying the rough lives of enslaved African-Americans.
+D The Federalist Papers #These papers by Alexander Hamilton and co. actually argued for ratification of the Constitution.
+
+How did Eli Whitney's cotton gin change the southern plantation economy?
+A It made slaves obsolete, as cotton fibers could easily be extracted by the device. #Slaves were actually in greater demand, as there needed to be a labor force to pick cotton that would later be fed into the cotton gin.
+D It increased the South's dependency on slavery, as the cotton industry became more profitable. *The cotton gin made cotton processing quicker and thus, the cotton industry more profitable. As such, they were dependent on slaves to maintain this profitability.
+C It made the South industrialize with factories. #The South did not start building factories because of the cotton gin.
+D It disrupted the supply/demand of the South, as a greater supply of cotton meant that cotton was no longer profitable to sell. #The cotton gin actually bolstered the profitability of cotton.

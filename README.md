@@ -1,6 +1,8 @@
 # history-quiz-generator
 AP Computer Science A - Semester 2 Project
 
+[Rubric link](https://docs.google.com/document/d/1kkTcjtoqqNUm27fskDq793hNNnXiM8dwtstv5jVIrts/edit)
+
 Contributors: Edward Phan and Tommy V. Tran
 
 The quiz covers pre-World War II US History.

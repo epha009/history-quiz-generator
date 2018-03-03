@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Question {
+    //TODO: Consider making an Option class to prevent code repeat
     String ask;
     char correctOption;
     String tempA;
@@ -17,6 +18,7 @@ public class Question {
 
 
     /**
+     * Constructor to initialize the Question based on a given question number
      * @param questionNumber 0 to numberOfQuestions - 1
      */
     public Question(int questionNumber) {
@@ -37,6 +39,7 @@ public class Question {
             tempC = in.nextLine();
             tempD = in.nextLine();
 
+            //Find the correct option and read in all the options without their explanations.
             if (findStop(tempA) == '*') {
                 correctOption = 'A';
                 optionA = tempA.substring(0, tempA.indexOf('*'));
@@ -91,6 +94,9 @@ public class Question {
         return stop;
     }
 
+    /**
+     * Prints the question along with options without explanations.
+     */
     public void askQuestion() {
         System.out.println(ask);
         System.out.println(optionA);
@@ -100,6 +106,9 @@ public class Question {
         System.out.print("Choose answer (A, B, C, D): ");
     }
 
+    /**
+     * Prints the options with explanations.
+     */
     public void seeOptionsAndExplanations() {
         System.out.println(tempA);
         System.out.println(tempB);

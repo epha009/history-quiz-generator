@@ -1,5 +1,3 @@
-
-
 Who was Andrew Carnegie and what did he do for America?
 A He was a political figure that had control over the steel industry. #He was not a political figure but he did have control of the steel industry.
 B He was a political figure that helped stop the exploitation of workers during the gilded age. #He was not a political figure and he exploited workers
@@ -18,14 +16,13 @@ B Idea from Britain that humans could be bred like animals to have desired trait
 C Idea from America that genes could be altered in human beings. #Eugenics did not start in the US nor did they believe they could alter genes.
 D Idea from Germany that genes could be altered in human beings. #Eugenics did not start in Germany nor did they believe they could alter genes.
 
-
 What is consumer culture and when did people start paying attention to it in America?
 A An economy that focuses on selling consumer goods. Americans started to pay attention to it around the 1910s. *Consumer culture was an economy based around selling consumer goods such as cars. The idea started off around the 1910s when city life was glorified and everyone wanted to flaunt off their wealth with materialistic goods.
 B An economy that focuses on selling consumer goods. Americans started to pay attention to it during the civil war era. #The definition is correct but the idea did not have light shined upon it until the 1900s.
 C The culture of the people that buy goods. Americans started to pay attention to it around the 1910s. #The definition is wrong but the time is correct.
 D The culture of the people that buy goods. Americans started to pay attention to it during the civil war era. #The definition and the time is incorrect.
 
-What best describes the 1920s presidents.
+What best describes the 1920s presidents?
 A Laid back and conservative. *Not much happened during this time period and the presidents of the time heavily believed in laissez faire.
 B Radical and demanding. #They were definitely not radical in their ideas or their way of being president.
 C Outspoken and needy. #They were not very outspoken and one of the presidents even had the name “Silent Cal”.
@@ -42,7 +39,6 @@ A Theodore Roosevelt. #Theodore Roosevelt actually issued the Roosevelt Corollar
 B Rutherford B. Hayes. #Hayes' presidency was focused on domestic affairs like civil rights reform.
 C George Washington. #Though Washington did encourage future presidents to stay away from European affairs, he did not issue any formal doctrine regarding colonialism.
 D James Monroe. *Monroe issued his Monroe Doctrine in 1823 as a safeguard against European interference in the Western Hemisphere.
-
 
 Which philosophy argued that it was justified for the rich to stay rich and the poor to stay poor?
 A Social Darwinism *This philosophy asserts that people should be divided between rich and poor as a result of survival of the fittest.
@@ -71,7 +67,7 @@ D The name of the newspaper due to the paper's yellow color. #There was no newsp
 Which of these government measures was not enacted during Theodore Roosevelts Presidency?
 A Elkins Act #This act was put under Teddy Roosevelt's presidency to make the railroad system more fair for all people.
 B Antiquities Act #This act was put under Teddy Roosevelt's presidency to limit and protect the usage of American resources.
-C Hepburn Act
+C Hepburn Act #explanationToBePlaced //TODO: put explanation here
 D Federal Reserve Act *This act was put under Woodrow Wilson's presidency to make the financial system within the US more stable and at the same time, more flexible.
 
 What group of people would most likely disagree with the Roosevelt Corollary?
@@ -102,7 +98,7 @@ What was NOT a reason for the start of the Great Depression?
 A There were a lot of bank rushes in which a large group of people withdrew all their money at once. #This was one of the main reasons for the start of the Great Depression. Bank rushes occurred throughout the whole country and banks would go bankrupt due to not having the money to give out.
 B The stock market crashed and the attempts to restore the market failed. #There was a large stock market crash one day and the government tried to revive it by pooling in money in to it. The attempts to revive the market only lasted a few days, and the old situation came about again.
 C Nation wide labor unions striking against unfair work conditions. *At this time, there were no large labor union strikes. This is not a cause for the Great Depression.
-D A world wide recession that was made worse by the Smoot-Hawley Tariff.#The entire world was in a recession at this time and Hoover passed the Smmoot-Hawley tariff to try to revive the American economy. However, this only made the recession worse for all countries because many retaliation tariffs were put on American goods worldwide.
+D A world wide recession that was made worse by the Smoot-Hawley Tariff. #The entire world was in a recession at this time and Hoover passed the Smmoot-Hawley tariff to try to revive the American economy. However, this only made the recession worse for all countries because many retaliation tariffs were put on American goods worldwide.
 
 What was NOT a reason argued for why the treaty of Versailles was a failure?
 A The treaty took too much money away from Americans. *This was not a reason why the treaty was seen as a failure. No money was taken away from America in this treaty.
@@ -120,4 +116,4 @@ What was one way that America was said to favor the allied powers over the centr
 A The American loans given to Britain and France totaled $2.5 billion while only $56 million to Germans. *During America's neutrality period of World War 1, America gave a lot more money to the British and French than the Germans. Despite being neutral, it was apparent that America favored the allied powers.
 B America directly sent free weapons and ships to the allied powers during the war and refused to give the central powers any weapons. #No free weapons were given to either side of the war.
 C America secretly sent troops to fight for the allies during the war. #America did not send any troops to Europe to fight.
-D America didn't accept trade from any nations from the central powers.#America continued to trade with Germany during the start of the World War, making this answer invalid.
+D America didn't accept trade from any nations from the central powers. #America continued to trade with Germany during the start of the World War, making this answer invalid.

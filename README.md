@@ -17,7 +17,7 @@ reasonings.
 
 Program is expected to maintain
 1. The highest score of any given player_name
-2. Record high school
+2. Record high score
 
 At the end, the top 5 scores of the given player_name along with the record
 high score is displayed.

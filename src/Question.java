@@ -1,20 +1,20 @@
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Question {
     //TODO: Consider making an Option class to prevent code repeat
-    String ask;
-    char correctOption;
-    String tempA;
-    String tempB;
-    String tempC;
-    String tempD;
-    String optionA;
-    String optionB;
-    String optionC;
-    String optionD;
+    private String ask;
+    private char correctOption;
+    private String tempA;
+    private String tempB;
+    private String tempC;
+    private String tempD;
+    private String optionA;
+    private String optionB;
+    private String optionC;
+    private String optionD;
 
 
     /**
@@ -22,16 +22,15 @@ public class Question {
      * @param questionNumber 0 to numberOfQuestions - 1
      */
     public Question(int questionNumber) {
-        Random r = new Random();
-        int indexOfAsk = 1 + QuestionBank.getSpaceBetweenQuestions() * questionNumber; //line number of the text to be asked
+        int indexOfAsk = QuestionBank.getSpaceBetweenQuestions() * questionNumber; //indexOfAsk is line number of the text to be asked
 
         //go through the file and parse the contents of that line into String ask
         try {
-            Scanner in = new Scanner(new File("questions.txt"));
-            int counter = 0;
-            while (in.hasNext() && indexOfAsk > counter + 1) {
-                counter++;
+            Scanner in = new Scanner(new File("data/questions.txt"));
+            int lineAboutToBeRead = 0;
+            while (in.hasNext() && indexOfAsk > lineAboutToBeRead) {
                 in.nextLine();
+                lineAboutToBeRead++;
             }
             ask = in.nextLine();
             tempA = in.nextLine();
@@ -67,8 +66,12 @@ public class Question {
             }
 
 
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.print("Failed at question: " + ask);
+            //e.printStackTrace();
+
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("File not found.");
         }
 
     }
@@ -96,14 +99,28 @@ public class Question {
 
     /**
      * Prints the question along with options without explanations.
+     *
+     * @return Whether or not the user's input is correct
      */
-    public void askQuestion() {
+    public boolean askQuestion() {
         System.out.println(ask);
         System.out.println(optionA);
         System.out.println(optionB);
         System.out.println(optionC);
         System.out.println(optionD);
         System.out.print("Choose answer (A, B, C, D): ");
+        Scanner in = new Scanner(System.in);
+        String userInput = in.next();
+        char userAnswer = userInput.charAt(0);
+        if(correctOption == userAnswer) {
+            System.out.println("You are correct!");
+            return true;
+        } else {
+            System.out.println("You are wrong!");
+           return false;
+        }
+
+
     }
 
     /**
@@ -114,5 +131,8 @@ public class Question {
         System.out.println(tempB);
         System.out.println(tempC);
         System.out.println(tempD);
+        System.out.println();
     }
+
+
 }

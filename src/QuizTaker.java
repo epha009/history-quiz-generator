@@ -118,7 +118,7 @@ public class QuizTaker {
 	public String toString() {
 		String nameAndScore = name;
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 5 && i < score.size() - 1; i++) {
 			name += " " + score.get(i);
 		}
 		

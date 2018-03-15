@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 /**
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  */
 public class QuizTaker {
 	private String name;
-	private int score;
+	private ArrayList<Integer> score;
 
 	/**
 	 * default constructor
@@ -28,7 +29,7 @@ public class QuizTaker {
 	 */
 	public QuizTaker(String testTakerName, int points) {
 		name = testTakerName;
-		score = points;
+		score.add(points);
 	}
 
 	/**
@@ -41,12 +42,15 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method getScore - getter method for the score variable
+	 * method getScore - gets a score from a certain index from the QuizTakers list
+	 * of scores
 	 * 
-	 * @return - TestTaker's score
+	 * @param index
+	 *            - the score that you would like to get
+	 * @return - the score at the certain index of the QuizTaker
 	 */
-	public int getScore() {
-		return score;
+	public int getScore(int index) {
+		return score.get(index);
 	}
 
 	/**
@@ -65,7 +69,58 @@ public class QuizTaker {
 	 * @param points
 	 *            - what the points will be changed to
 	 */
-	public void setScore(int points) {
-		score = points;
+	public void setScore(int points, int index) {
+		score.set(index, points);
+	}
+
+	/**
+	 * method addScore - adds a score to the QuizTakers list of scores
+	 * 
+	 * @param point
+	 *            - the score you want to add
+	 */
+	public void addScore(int point) {
+		score.add(point);
+	}
+
+	/**
+	 * method selectionSort - helper method to sort the numbers in an array list
+	 * 
+	 * @param arr
+	 *            - the arraylist you want to sort
+	 */
+	public static void selectionSort(ArrayList<Integer> arr) {
+		for (int i = 0; i < arr.size(); i++) {
+
+			int pos = i;
+			for (int j = i; j < arr.size(); j++) {
+				if (arr.get(j) < arr.get(pos))
+					pos = j;
+			}
+
+			int min = arr.get(pos);
+			arr.set(pos, arr.get(i));
+			arr.set(i, min);
+
+		}
+	}
+
+	/**
+	 * method sortScores - sorts the scores of the QuizTaker
+	 */
+	public void sortScores() {
+		selectionSort(score);
+	}
+
+	/**
+	 * method toString - prints out QuizTaker in correct format
+	 */
+	public String toString() {
+		String nameAndScore = name;
+
+		for (int s : score) {
+			nameAndScore += " " + s;
+		}
+		return nameAndScore;
 	}
 }

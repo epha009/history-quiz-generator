@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class QuizTaker {
 	private String name;
-	private ArrayList<Integer> score;
+	private ArrayList<Integer> score = new ArrayList<Integer>(5);
 
 	/**
 	 * default constructor
@@ -113,14 +113,15 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method toString - prints out QuizTaker in correct format
+	 * method toString - prints out QuizTaker in correct format 
 	 */
 	public String toString() {
 		String nameAndScore = name;
 
-		for (int s : score) {
-			nameAndScore += " " + s;
+		for (int i = 0; i < 5; i++) {
+			name += " " + score.get(i);
 		}
+		
 		return nameAndScore;
 	}
 }

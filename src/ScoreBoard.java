@@ -29,7 +29,7 @@ public class ScoreBoard {
 
 				// if name already exists than the score is added to that QuizTaker
 				for (int i = 0; i < scoreBoard.size() - 1; i++) {
-					if (scoreBoard.get(i).getName().equals(taker.getName())) {
+					if (scoreBoard.get(i).getName().equals(taker.getName()) ) {
 						scoreBoard.get(i).addScore(score);
 						scoreBoard.get(i).sortScores();
 					} else {
@@ -59,6 +59,7 @@ public class ScoreBoard {
 	 * method printScores - prints the name and scores of each QuizTaker
 	 */
 	public void printScores() {
+		highestScorer();
 		System.out.println("Highest Scorer: ");
 		for (QuizTaker s : scoreBoard) {
 			s.toString();

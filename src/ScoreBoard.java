@@ -17,6 +17,7 @@ public class ScoreBoard {
 	 */
 	public ScoreBoard() {
 		try {
+
 			Scanner reader = new Scanner(new File("Scores.txt"));
 
 			while (reader.hasNext()) {
@@ -31,10 +32,10 @@ public class ScoreBoard {
 					if (scoreBoard.get(i).getName().equals(taker.getName())) {
 						scoreBoard.get(i).addScore(score);
 						scoreBoard.get(i).sortScores();
-					} else {
-
+						scoreBoard.remove(scoreBoard.size() - 1);
 					}
 				}
+
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -48,10 +49,10 @@ public class ScoreBoard {
 		int highestScorerIndex = 0;
 
 		if (!scoreBoard.equals(null)) {
-			for (int i = 1; i < scoreBoard.size() - 1; i++) {
-				if (scoreBoard.get(highestScorerIndex).getScore(0) < scoreBoard.get(i).getScore(0))
-					;
+			for (int i = 1; i < scoreBoard.size() - 1 && scoreBoard.size() > 1; i++) {
+				if (scoreBoard.get(highestScorerIndex).getScore(0) < scoreBoard.get(i).getScore(0)) {
 				highestScorerIndex = i;
+				}
 			}
 			scoreBoard.set(0, scoreBoard.get(highestScorerIndex));
 		}

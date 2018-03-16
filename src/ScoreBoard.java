@@ -32,8 +32,8 @@ public class ScoreBoard {
 				for (int i = 0; i < scoreBoard.size() - 1 && scoreBoard.size() > 0; i++) {
 					if (scoreBoard.get(i).getName().equals(taker.getName())) {
 						scoreBoard.get(i).addScore(score);
-						Collections.sort(scoreBoard.get(i).getScore());
-						Collections.reverse(scoreBoard.get(i).getScore());
+						Collections.sort(scoreBoard.get(i).getMyScores());
+						Collections.reverse(scoreBoard.get(i).getMyScores());
 						scoreBoard.remove(scoreBoard.size() - 1);
 					}
 				}

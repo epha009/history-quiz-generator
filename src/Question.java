@@ -117,16 +117,18 @@ public class Question {
             return true;
         } else {
             System.out.println("You are wrong!");
-           return false;
+            return false;
         }
 
 
     }
 
     /**
-     * Prints the options with explanations.
+     * Prints the correct option along with the explanations.
      */
-    public void seeOptionsAndExplanations() {
+    public void seeCorrectOption() {
+        System.out.print("The correct option was: ");
+        System.out.println(correctOption);
         System.out.println(tempA);
         System.out.println(tempB);
         System.out.println(tempC);

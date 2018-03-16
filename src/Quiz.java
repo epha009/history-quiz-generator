@@ -25,7 +25,7 @@ public class Quiz extends QuestionBank{
             if(myQuestion.askQuestion()) {
                 score++;
             }
-            myQuestion.seeOptionsAndExplanations();
+            myQuestion.seeCorrectOption();
         }
     }
 }

@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * 
@@ -12,7 +11,7 @@ import java.util.Collections;
  */
 public class QuizTaker {
 	private String name;
-	private ArrayList<Integer> score = new ArrayList<Integer>(5);
+	private ArrayList<Integer> myScores = new ArrayList<Integer>(5);
 
 	/**
 	 * default constructor
@@ -23,14 +22,14 @@ public class QuizTaker {
 
 	/**
 	 * 
-	 * @param testQuizName
-	 *            - the test takers name
-	 * @param points
-	 *            - amount of points test taker scored
+	 * @param name
+	 *            - the quiz taker's name
+	 * @param score
+	 *            - amount of points the quiz taker has scored in this attempt
 	 */
-	public QuizTaker(String testTakerName, int points) {
-		name = testTakerName;
-		score.add(points);
+	public QuizTaker(String name, int score) {
+		this.name = name;
+		myScores.add(score);
 	}
 
 	/**
@@ -43,19 +42,19 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method getScore - gets a score from a certain index from the QuizTakers list
+	 * method getMyScores - gets a myScores from a certain index from the QuizTakers list
 	 * of scores
 	 * 
 	 * @param index
-	 *            - the score that you would like to get
-	 * @return - the score at the certain index of the QuizTaker
+	 *            - the myScores that you would like to get
+	 * @return - the myScores at the certain index of the QuizTaker
 	 */
 	public int getScore(int index) {
-		return score.get(index);
+		return myScores.get(index);
 	}
 
-	public ArrayList<Integer> getScore() {
-		return score;
+	public ArrayList<Integer> getMyScores() {
+		return myScores;
 	}
 	/**
 	 * method setName - setter method to set the name of the TestTaker
@@ -68,23 +67,23 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method setScore - setter method to set the score of the TestTaker
+	 * method setScore - setter method to set the myScores of the TestTaker
 	 * 
 	 * @param points
 	 *            - what the points will be changed to
 	 */
 	public void setScore(int points, int index) {
-		score.set(index, points);
+		myScores.set(index, points);
 	}
 
 	/**
-	 * method addScore - adds a score to the QuizTakers list of scores
+	 * method addScore - adds a myScores to the QuizTakers list of scores
 	 * 
 	 * @param point
-	 *            - the score you want to add
+	 *            - the myScores you want to add
 	 */
 	public void addScore(int point) {
-		score.add(point);
+		myScores.add(point);
 	}
 
 	/**
@@ -110,7 +109,7 @@ public class QuizTaker {
 	}
 	
 	public void sort() {
-		selectionSort(score);
+		selectionSort(myScores);
 	}
 
 	/**
@@ -119,7 +118,7 @@ public class QuizTaker {
 	
 	public String toString() {
 		String nameAndScore = name;
-		for (int i = 0; i < 5 && i < score.size(); i++) {
+		for (int i = 0; i < 5 && i < myScores.size(); i++) {
 			nameAndScore += " " + getScore(i);
 		}
 		

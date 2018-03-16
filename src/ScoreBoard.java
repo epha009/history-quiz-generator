@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.*;
+import java.util.Collections;
 
 /**
  * class ScoreBoard - creates a score board to hold all of the scores of
@@ -21,9 +22,9 @@ public class ScoreBoard {
 			Scanner reader = new Scanner(new File("Scores.txt"));
 
 			while (reader.hasNext()) {
-				String name = reader.nextLine();
+				String name = reader.next();
 				int score = reader.nextInt();
-				reader.nextLine();
+				
 
 				QuizTaker taker = new QuizTaker(name, score);
 				scoreBoard.add(taker);
@@ -31,14 +32,15 @@ public class ScoreBoard {
 				for (int i = 0; i < scoreBoard.size() - 1 && scoreBoard.size() > 0; i++) {
 					if (scoreBoard.get(i).getName().equals(taker.getName())) {
 						scoreBoard.get(i).addScore(score);
-						scoreBoard.get(i).sortScores();
+						Collections.sort(scoreBoard.get(i).getScore());
+						Collections.reverse(scoreBoard.get(i).getScore());
 						scoreBoard.remove(scoreBoard.size() - 1);
 					}
 				}
 
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -51,7 +53,7 @@ public class ScoreBoard {
 		if (!scoreBoard.equals(null)) {
 			for (int i = 1; i < scoreBoard.size() - 1 && scoreBoard.size() > 1; i++) {
 				if (scoreBoard.get(highestScorerIndex).getScore(0) < scoreBoard.get(i).getScore(0)) {
-				highestScorerIndex = i;
+					highestScorerIndex = i;
 				}
 			}
 			scoreBoard.set(0, scoreBoard.get(highestScorerIndex));
@@ -62,12 +64,10 @@ public class ScoreBoard {
 	 * method printScores - prints the name and scores of each QuizTaker
 	 */
 	public void printScores() {
-
-		System.out.println("Highest Scorer: ");
-		for (QuizTaker s : scoreBoard) {
-			s.toString();
-			System.out.println();
-		}
+		highestScorer();
+		System.out.print("Highest Scorer: ");
+		System.out.println(scoreBoard.get(0).toString());
+		
 	}
 
 }

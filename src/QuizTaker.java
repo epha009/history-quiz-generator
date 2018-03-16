@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * 
@@ -53,6 +54,9 @@ public class QuizTaker {
 		return score.get(index);
 	}
 
+	public ArrayList<Integer> getScore() {
+		return score;
+	}
 	/**
 	 * method setName - setter method to set the name of the TestTaker
 	 * 
@@ -104,24 +108,22 @@ public class QuizTaker {
 
 		}
 	}
-
-	/**
-	 * method sortScores - sorts the scores of the QuizTaker
-	 */
-	public void sortScores() {
+	
+	public void sort() {
 		selectionSort(score);
 	}
 
 	/**
 	 * method toString - prints out QuizTaker in correct format 
 	 */
+	
 	public String toString() {
 		String nameAndScore = name;
-
-		for (int i = 0; i < 5 && i < score.size() - 1; i++) {
-			name += " " + score.get(i);
+		for (int i = 0; i < 5 && i < score.size(); i++) {
+			nameAndScore += " " + getScore(i);
 		}
 		
 		return nameAndScore;
+		
 	}
 }

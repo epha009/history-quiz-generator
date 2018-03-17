@@ -1,5 +1,4 @@
 
-
 import java.io.File;
 import java.util.*;
 import java.util.Collections;
@@ -8,7 +7,7 @@ import java.util.Collections;
  * class Scoreboard - creates a score board to hold all of the scores of
  * QuizTakers
  *
- * @author Edward Phan, Tommy Vo Tran
+ * @author Edward Phan
  *
  */
 public class Scoreboard {
@@ -54,13 +53,24 @@ public class Scoreboard {
 
 		// runs through all the QuizTakers within the scoreBoard array and sets the
 		// highest scoring QuizTaker to the index of 0 in the scoreBoard arraylist
-
 		for (int i = 1; i < scoreBoard.size() && scoreBoard.size() > 1; i++) {
-			if (scoreBoard.get(highestScorerIndex).getScore(0) < scoreBoard.get(i).getScore(0)) {
+			if (scoreBoard.get(highestScorerIndex).getScore(0) <= scoreBoard.get(i).getScore(0)) {
 				highestScorerIndex = i;
 			}
 		}
-		scoreBoard.set(0, scoreBoard.get(highestScorerIndex));
+		scoreBoard.add(0, scoreBoard.get(highestScorerIndex));
+		scoreBoard.remove(highestScorerIndex + 1);
+	}
+
+	/**
+	 * method scoredA5 - prints out all Quiz Takers that scored a 5 on the quiz
+	 */
+	public void scoredA5() {
+		for (int i = 0; i < scoreBoard.size() && scoreBoard.size() > 0; i++) {
+			if (scoreBoard.get(i).getScore(0) == 5) {
+				System.out.println(scoreBoard.get(i).getName());
+			}
+		}
 	}
 
 	/**
@@ -73,6 +83,8 @@ public class Scoreboard {
 		System.out.print("--------------------");
 
 		System.out.println("\nCURRENT QUIZ TAKER:");
+		// prints out the current Quiz Takers: Name and past highest scores in
+		// descending order
 		for (int i = 0; i < scoreBoard.size() && scoreBoard.size() > 0; i++) {
 			if (scoreBoard.get(i).getName().equals(currentPlayerName)) {
 				System.out.println(scoreBoard.get(i).toString());
@@ -80,7 +92,14 @@ public class Scoreboard {
 			}
 		}
 
-		System.out.println("\nHIGHEST QUIZ SCORER:");
+		// prints the score of the person that scored the highest score.
+		System.out.println("\n(MOST RECENT) HIGHEST QUIZ SCORER:");
 		System.out.println(scoreBoard.get(0).getName() + " " + scoreBoard.get(0).getScore(0));
+
+		System.out.println("\nQUIZ TAKERS THAT HAVE SCORED A 5: ");
+		scoredA5();
+
 	}
+
 }
+

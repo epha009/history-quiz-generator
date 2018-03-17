@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class QuizTaker {
 	private String name;
-	private ArrayList<Integer> myScores = new ArrayList<Integer>(5); //an ArrayList representing the scores to the player's name
+	private ArrayList<Comparable> myScores = new ArrayList<Comparable>(5); //an ArrayList representing the scores to the player's name
 
 	/**
 	 * default constructor
@@ -51,7 +51,7 @@ public class QuizTaker {
 	 *            - the myScores that you would like to get
 	 * @return - the myScores at the certain index of the QuizTaker
 	 */
-	public int getScore(int index) {
+	public Comparable getScore(int index) {
 		return myScores.get(index);
 	}
 
@@ -61,7 +61,7 @@ public class QuizTaker {
 	 *
 	 * @return the ArrayList of scores of the quiz taker
 	 */
-	public ArrayList<Integer> getMyScores() {
+	public ArrayList<Comparable> getMyScores() {
 		return myScores;
 	}
 

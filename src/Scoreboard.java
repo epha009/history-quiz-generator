@@ -1,7 +1,7 @@
 
 import java.io.File;
-import java.util.*;
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * class Scoreboard - creates a score board to hold all of the scores of
@@ -32,8 +32,7 @@ public class Scoreboard {
 				for (int i = 0; i < scoreBoard.size() - 1 && scoreBoard.size() > 0; i++) {
 					if (scoreBoard.get(i).getName().equals(taker.getName())) {
 						scoreBoard.get(i).addScore(score);
-						Collections.sort(scoreBoard.get(i).getMyScores());
-						Collections.reverse(scoreBoard.get(i).getMyScores());
+						Sorter.quickSort(scoreBoard.get(i).getMyScores(), 0, scoreBoard.get(i).getMyScores().size()-1);
 						scoreBoard.remove(scoreBoard.size() - 1);
 					}
 				}
@@ -54,7 +53,7 @@ public class Scoreboard {
 		// runs through all the QuizTakers within the scoreBoard array and sets the
 		// highest scoring QuizTaker to the index of 0 in the scoreBoard arraylist
 		for (int i = 1; i < scoreBoard.size() && scoreBoard.size() > 1; i++) {
-			if (scoreBoard.get(highestScorerIndex).getScore(0) <= scoreBoard.get(i).getScore(0)) {
+			if (scoreBoard.get(highestScorerIndex).getScore(0).compareTo(scoreBoard.get(i).getScore(0)) <= 0) {
 				highestScorerIndex = i;
 			}
 		}
@@ -67,24 +66,24 @@ public class Scoreboard {
 	 */
 	public void scoredA5() {
 		for (int i = 0; i < scoreBoard.size() && scoreBoard.size() > 0; i++) {
-			if (scoreBoard.get(i).getScore(0) == 5) {
+			if (scoreBoard.get(i).getScore(0).compareTo(5) == 0) {
 				System.out.println(scoreBoard.get(i).getName());
 			}
 		}
 	}
 
 	/**
-	 * method printScores - prints the name and scores of the highest scorer, then
-	 * prints out the score of the player of choice
+	 * Print the top 5 highest scores of the current quiz taker, along with the most recent highest quiz score and anyone who has
+	 * scored a 5.
 	 */
 	public void printScores(String currentPlayerName) {
 		highestScorer();
 		System.out.println("SCORE BOARD:");
 		System.out.print("--------------------");
 
-		System.out.println("\nCURRENT QUIZ TAKER:");
-		// prints out the current Quiz Takers: Name and past highest scores in
-		// descending order
+		System.out.println("\nTOP 5 SCORES OF CURRENT QUIZ TAKER");
+
+		// prints out the current quiz taker's name and top 5 highest scores in descending order
 		for (int i = 0; i < scoreBoard.size() && scoreBoard.size() > 0; i++) {
 			if (scoreBoard.get(i).getName().equals(currentPlayerName)) {
 				System.out.println(scoreBoard.get(i).toString());
@@ -92,10 +91,11 @@ public class Scoreboard {
 			}
 		}
 
-		// prints the score of the person that scored the highest score.
+		// prints the score of the person that scored the highest score
 		System.out.println("\n(MOST RECENT) HIGHEST QUIZ SCORER:");
 		System.out.println(scoreBoard.get(0).getName() + " " + scoreBoard.get(0).getScore(0));
 
+		//prints out anyone who has scored a 5
 		System.out.println("\nQUIZ TAKERS THAT HAVE SCORED A 5: ");
 		scoredA5();
 

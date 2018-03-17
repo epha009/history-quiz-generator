@@ -24,7 +24,6 @@ public class ScoreBoard {
 			while (reader.hasNext()) {
 				String name = reader.next();
 				int score = reader.nextInt();
-				
 
 				QuizTaker taker = new QuizTaker(name, score);
 				scoreBoard.add(taker);
@@ -45,29 +44,42 @@ public class ScoreBoard {
 	}
 
 	/**
-	 * method highestScorer - sets the 0th index to the highest scorer
+	 * method highestScorer - sets the 0th index of the scoreboard to the highest
+	 * scorer
 	 */
 	public void highestScorer() {
 		int highestScorerIndex = 0;
 
-		if (!scoreBoard.equals(null)) {
-			for (int i = 1; i < scoreBoard.size() - 1 && scoreBoard.size() > 1; i++) {
-				if (scoreBoard.get(highestScorerIndex).getScore(0) < scoreBoard.get(i).getScore(0)) {
-					highestScorerIndex = i;
-				}
+		// runs through all the QuizTakers within the scoreBoard array and sets the
+		// highest scoring QuizTaker to the index of 0 in the scoreBoard arraylist
+
+		for (int i = 1; i < scoreBoard.size() && scoreBoard.size() > 1; i++) {
+			if (scoreBoard.get(highestScorerIndex).getScore(0) < scoreBoard.get(i).getScore(0)) {
+				highestScorerIndex = i;
 			}
-			scoreBoard.set(0, scoreBoard.get(highestScorerIndex));
 		}
+		scoreBoard.set(0, scoreBoard.get(highestScorerIndex));
 	}
 
 	/**
-	 * method printScores - prints the name and scores of each QuizTaker
+	 * method printScores - prints the name and scores of the highest scorer, then
+	 * prints out the score of the player of choice
 	 */
-	public void printScores() {
+	public void printScores(String currentPlayerName) {
 		highestScorer();
-		System.out.print("Highest Scorer: ");
-		System.out.println(scoreBoard.get(0).toString());
-		
+		System.out.println("SCORE BOARD:");
+		System.out.print("--------------------");
+
+		System.out.println("\nCURRENT QUIZ TAKER:");
+		for (int i = 0; i < scoreBoard.size() && scoreBoard.size() > 0; i++) {
+			if (scoreBoard.get(i).getName().equals(currentPlayerName)) {
+				System.out.println(scoreBoard.get(i).toString());
+				break;
+			}
+		}
+
+		System.out.println("\nHIGEST QUIZ SCORER:");
+		System.out.println(scoreBoard.get(0).getName() + " " + scoreBoard.get(0).getScore(0));
 	}
 
 }

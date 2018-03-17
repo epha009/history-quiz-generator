@@ -1,6 +1,7 @@
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.io.*;
+import java.util.*;
+
 
 /**
  * 
@@ -54,9 +55,16 @@ public class QuizTaker {
 		return score.get(index);
 	}
 
+	/**
+	 * method getScore - a overridden class to get the array of scores of the
+	 * QuizTaker
+	 * 
+	 * @return the array of scores of the QuizTaker
+	 */
 	public ArrayList<Integer> getScore() {
 		return score;
 	}
+
 	/**
 	 * method setName - setter method to set the name of the TestTaker
 	 * 
@@ -88,42 +96,38 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method selectionSort - helper method to sort the numbers in an array list
+	 * method addNewPlayer - adds the name and the score of the QuizTaker to the
+	 * file to store the information
 	 * 
-	 * @param arr
-	 *            - the arraylist you want to sort
+	 * @param name
+	 *            - the name of the player
+	 * @param score
+	 *            - the score that the player got on one of the Quiz runs
 	 */
-	public static void selectionSort(ArrayList<Integer> arr) {
-		for (int i = 0; i < arr.size(); i++) {
+	public void addNewPlayer(String name, int score) {
+		try {
+			FileWriter writer = new FileWriter("Scores.txt", true);
 
-			int pos = i;
-			for (int j = i; j < arr.size(); j++) {
-				if (arr.get(j) < arr.get(pos))
-					pos = j;
-			}
+			writer.write(name + "\n");
+			writer.write(score + "\n\n");
 
-			int min = arr.get(pos);
-			arr.set(pos, arr.get(i));
-			arr.set(i, min);
-
+			writer.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
-	}
-	
-	public void sort() {
-		selectionSort(score);
 	}
 
 	/**
-	 * method toString - prints out QuizTaker in correct format 
+	 * method toString - prints out QuizTaker in correct format
 	 */
-	
+
 	public String toString() {
 		String nameAndScore = name;
 		for (int i = 0; i < 5 && i < score.size(); i++) {
 			nameAndScore += " " + getScore(i);
 		}
-		
+
 		return nameAndScore;
-		
+
 	}
 }

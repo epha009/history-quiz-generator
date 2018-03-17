@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Question {
+    
     //TODO: Consider making an Option class to prevent code repeat
     private String ask;
     private char correctOption;
@@ -26,7 +27,7 @@ public class Question {
 
         //go through the file and parse the contents of that line into String ask
         try {
-            Scanner in = new Scanner(new File("data/questions.txt"));
+            Scanner in = new Scanner(new File("questions.txt"));
             int lineAboutToBeRead = 0;
             while (in.hasNext() && indexOfAsk > lineAboutToBeRead) {
                 in.nextLine();

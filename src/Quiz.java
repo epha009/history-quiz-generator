@@ -31,7 +31,7 @@ public class Quiz extends QuestionBank{
             if(myQuestion.askQuestion()) {
                 score++;
             }
-            myQuestion.seeOptionsAndExplanations();
+            myQuestion.seeCorrectOption();
         }
         
         //adds the name and the score to the score.txt file

@@ -1,7 +1,4 @@
-
-import java.io.*;
-import java.util.*;
-
+import java.util.ArrayList;
 
 /**
  * 
@@ -13,7 +10,7 @@ import java.util.*;
  */
 public class QuizTaker {
 	private String name;
-	private ArrayList<Integer> score = new ArrayList<Integer>(5);
+	private ArrayList<Integer> myScores = new ArrayList<Integer>(5);
 
 	/**
 	 * default constructor
@@ -24,14 +21,14 @@ public class QuizTaker {
 
 	/**
 	 * 
-	 * @param testQuizName
-	 *            - the test takers name
-	 * @param points
-	 *            - amount of points test taker scored
+	 * @param name
+	 *            - the quiz taker's name
+	 * @param score
+	 *            - amount of points the quiz taker has scored in this attempt
 	 */
-	public QuizTaker(String testTakerName, int points) {
-		name = testTakerName;
-		score.add(points);
+	public QuizTaker(String name, int score) {
+		this.name = name;
+		myScores.add(score);
 	}
 
 	/**
@@ -44,27 +41,20 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method getScore - gets a score from a certain index from the QuizTakers list
+	 * method getMyScores - gets a myScores from a certain index from the QuizTakers list
 	 * of scores
 	 * 
 	 * @param index
-	 *            - the score that you would like to get
-	 * @return - the score at the certain index of the QuizTaker
+	 *            - the myScores that you would like to get
+	 * @return - the myScores at the certain index of the QuizTaker
 	 */
 	public int getScore(int index) {
-		return score.get(index);
+		return myScores.get(index);
 	}
 
-	/**
-	 * method getScore - a overridden class to get the array of scores of the
-	 * QuizTaker
-	 * 
-	 * @return the array of scores of the QuizTaker
-	 */
-	public ArrayList<Integer> getScore() {
-		return score;
+	public ArrayList<Integer> getMyScores() {
+		return myScores;
 	}
-
 	/**
 	 * method setName - setter method to set the name of the TestTaker
 	 * 
@@ -76,58 +66,62 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method setScore - setter method to set the score of the TestTaker
+	 * method setScore - setter method to set the myScores of the TestTaker
 	 * 
 	 * @param points
 	 *            - what the points will be changed to
 	 */
 	public void setScore(int points, int index) {
-		score.set(index, points);
+		myScores.set(index, points);
 	}
 
 	/**
-	 * method addScore - adds a score to the QuizTakers list of scores
+	 * method addScore - adds a myScores to the QuizTakers list of scores
 	 * 
 	 * @param point
-	 *            - the score you want to add
+	 *            - the myScores you want to add
 	 */
 	public void addScore(int point) {
-		score.add(point);
+		myScores.add(point);
 	}
 
 	/**
-	 * method addNewPlayer - adds the name and the score of the QuizTaker to the
-	 * file to store the information
+	 * method selectionSort - helper method to sort the numbers in an array list
 	 * 
-	 * @param name
-	 *            - the name of the player
-	 * @param score
-	 *            - the score that the player got on one of the Quiz runs
+	 * @param arr
+	 *            - the arraylist you want to sort
 	 */
-	public void addNewPlayer(String name, int score) {
-		try {
-			FileWriter writer = new FileWriter("Scores.txt", true);
+	public static void selectionSort(ArrayList<Integer> arr) {
+		for (int i = 0; i < arr.size(); i++) {
 
-			writer.write(name + "\n");
-			writer.write(score + "\n\n");
+			int pos = i;
+			for (int j = i; j < arr.size(); j++) {
+				if (arr.get(j) < arr.get(pos))
+					pos = j;
+			}
 
-			writer.close();
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			int min = arr.get(pos);
+			arr.set(pos, arr.get(i));
+			arr.set(i, min);
+
 		}
 	}
+	
+	public void sort() {
+		selectionSort(myScores);
+	}
 
 	/**
-	 * method toString - prints out QuizTaker in correct format
+	 * method toString - prints out QuizTaker in correct format 
 	 */
-
+	
 	public String toString() {
 		String nameAndScore = name;
-		for (int i = 0; i < 5 && i < score.size(); i++) {
+		for (int i = 0; i < 5 && i < myScores.size(); i++) {
 			nameAndScore += " " + getScore(i);
 		}
-
+		
 		return nameAndScore;
-
+		
 	}
 }

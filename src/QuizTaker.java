@@ -1,10 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-
 /**
  *
- * @author Edward Phan, Tommy Vo Tran
+ * @author Edward Phan
  *
  */
 /**
@@ -12,7 +11,8 @@ import java.util.*;
  */
 public class QuizTaker {
 	private String name;
-	private ArrayList<Comparable> myScores = new ArrayList<Comparable>(5); //an ArrayList representing the scores to the player's name
+	// an ArrayList representing the scores to the player's name
+	private ArrayList<Comparable> myScores = new ArrayList<Comparable>(5);
 
 	/**
 	 * default constructor
@@ -44,8 +44,7 @@ public class QuizTaker {
 	}
 
 	/**
-	 * Gets a score from a certain index from the quiz taker's list
-	 * of scores
+	 * Gets a score from a certain index from the quiz taker's list of scores
 	 *
 	 * @param index
 	 *            - the myScores that you would like to get
@@ -56,8 +55,8 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method getMyScores - a overridden class to get the array of scores of the
-	 * QuizTaker //TODO: More accurate documentation
+	 * method getMyScores - a overridden class to get the entire array of scores of
+	 * the QuizTaker
 	 *
 	 * @return the ArrayList of scores of the quiz taker
 	 */
@@ -78,8 +77,12 @@ public class QuizTaker {
 	/**
 	 * Setter method to set a specific score of the quiz taker
 	 *
+	 * 
 	 * @param points
 	 *            - what the points will be changed to
+	 * @param index
+	 *            - the index of the ArrayList that you would like to change the
+	 *            value of
 	 */
 	public void setScore(int points, int index) {
 		myScores.set(index, points);
@@ -96,8 +99,8 @@ public class QuizTaker {
 	}
 
 	/**
-	 * Writes the name and the score of the quiz taker to the
-	 * file to store the information
+	 * Writes the name and the score of the quiz taker to the file to store the
+	 * information
 	 *
 	 * @param name
 	 *            - the name of the player
@@ -106,7 +109,7 @@ public class QuizTaker {
 	 */
 	public void addNewPlayer(String name, int score) {
 		try {
-			FileWriter writer = new FileWriter("data/scores.txt", true);
+			FileWriter writer = new FileWriter("scores.txt", true);
 
 			writer.write(name + "\n");
 			writer.write(score + "\n\n");
@@ -118,27 +121,28 @@ public class QuizTaker {
 	}
 
 	/**
-	 * String representation of quiz taker object
-	 *
-	 * @return name and scores of this quiz taker
-	 */
-
-	public String toString() {
-		String nameAndScore = name;
-		for (int i = 0; i < 5 && i < myScores.size(); i++) {
-			nameAndScore += " " + getScore(i);
-		}
-
-		return nameAndScore;
-
-	}
-
-	/**
-	 * Get the number of scores the quiz taker has to his/her name
+	 * method getNumberOfScores - Get the number of scores the quiz taker has to
+	 * his/her name
+	 * 
+	 * @return the number of scores within the QuizTaker's score arraylist
 	 */
 	public int getNumberOfScores() {
 		return myScores.size();
 	}
 
-}
+	/**
+	 * String representation of quiz taker object
+	 *
+	 * @return name and scores of this quiz taker
+	 */
+	public String toString() {
+		String nameAndScore = name;
 
+		// loop to print 5 scores
+		for (int i = 0; i < 5 && i < myScores.size(); i++) {
+			nameAndScore += " " + getScore(i);
+		}
+		return nameAndScore;
+	}
+
+}

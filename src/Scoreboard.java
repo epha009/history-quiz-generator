@@ -28,11 +28,11 @@ public class Scoreboard {
 
 				QuizTaker taker = new QuizTaker(name, score);
 				scoreBoard.add(taker);
-				// if name already exists than the score is added to that QuizTaker
+				// if name already exists then the score is added to that QuizTaker
 				for (int i = 0; i < scoreBoard.size() - 1 && scoreBoard.size() > 0; i++) {
 					if (scoreBoard.get(i).getName().equals(taker.getName())) {
 						scoreBoard.get(i).addScore(score);
-						Sorter.quickSort(scoreBoard.get(i).getMyScores(), 0, scoreBoard.get(i).getMyScores().size()-1);
+						Sorter.quickSort(scoreBoard.get(i).getMyScores(), 0, scoreBoard.get(i).getMyScores().size() - 1);
 						scoreBoard.remove(scoreBoard.size() - 1);
 					}
 				}
@@ -44,40 +44,49 @@ public class Scoreboard {
 	}
 
 	/**
-	 * method highestScorer - sets the 0th index of the scoreboard to the highest
-	 * scorer
+	 *
+	 * PRECONDITION: Constructor has already run, so that the highest score of any given QuizTaker is already in index 0 of his/her myScores Arraylist
+	 * Method finds the highest score of any player
+	 *
+	 * @return highest score of any player
 	 */
-	public void highestScorer() {
-		int highestScorerIndex = 0;
+	public int findHighestScore() {
+		int highest = 0;
+		for(int i = 0; i < scoreBoard.size(); i++) {
 
-		// runs through all the QuizTakers within the scoreBoard array and sets the
-		// highest scoring QuizTaker to the index of 0 in the scoreBoard arraylist
-		for (int i = 1; i < scoreBoard.size() && scoreBoard.size() > 1; i++) {
-			if (scoreBoard.get(highestScorerIndex).getScore(0).compareTo(scoreBoard.get(i).getScore(0)) <= 0) {
-				highestScorerIndex = i;
+			if(scoreBoard.get(i).getScore(0).compareTo(highest) > 0) {
+				highest = (int) scoreBoard.get(i).getScore(0);
 			}
+
 		}
-		scoreBoard.add(0, scoreBoard.get(highestScorerIndex));
-		scoreBoard.remove(highestScorerIndex + 1);
+		return highest;
 	}
 
 	/**
-	 * method scoredA5 - prints out all Quiz Takers that scored a 5 on the quiz
+	 * Method returns a String of all the people who have scored the highest score, in order of latest to most recent.
+	 * Repeats of the highest score by the same name are not counted.
+	 *
+	 * @return every name that has achieved the highest score
 	 */
-	public void scoredA5() {
-		for (int i = 0; i < scoreBoard.size() && scoreBoard.size() > 0; i++) {
-			if (scoreBoard.get(i).getScore(0).compareTo(5) == 0) {
-				System.out.println(scoreBoard.get(i).getName());
+	public String findHighestScorers() {
+		String names = "";
+		int highest = findHighestScore();
+		for(int i = 0; i < scoreBoard.size(); i++) {
+			for(int j = 0; j < scoreBoard.get(i).getNumberOfScores(); j++) {
+				if(scoreBoard.get(i).getScore(0).compareTo(highest) == 0 && names.indexOf(scoreBoard.get(i).getName()) == -1) {
+					names += scoreBoard.get(i).getName() + " ";
+				}
 			}
 		}
+		return names;
 	}
+
 
 	/**
 	 * Print the top 5 highest scores of the current quiz taker, along with the most recent highest quiz score and anyone who has
 	 * scored a 5.
 	 */
 	public void printScores(String currentPlayerName) {
-		highestScorer();
 		System.out.println("SCORE BOARD:");
 		System.out.print("--------------------");
 
@@ -91,13 +100,8 @@ public class Scoreboard {
 			}
 		}
 
-		// prints the score of the person that scored the highest score
-		System.out.println("\n(MOST RECENT) HIGHEST QUIZ SCORER:");
-		System.out.println(scoreBoard.get(0).getName() + " " + scoreBoard.get(0).getScore(0));
-
-		//prints out anyone who has scored a 5
-		System.out.println("\nQUIZ TAKERS THAT HAVE SCORED A 5: ");
-		scoredA5();
+		System.out.println("\nHIGHEST SCORE EVER (" + findHighestScore() + ") WAS ACHIEVED BY");
+		System.out.println(findHighestScorers());
 
 	}
 

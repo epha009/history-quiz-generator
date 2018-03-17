@@ -44,7 +44,7 @@ public class QuizTaker {
 	}
 
 	/**
-	 * Gets a myScores from a certain index from the quiz taker's list
+	 * Gets a score from a certain index from the quiz taker's list
 	 * of scores
 	 *
 	 * @param index
@@ -132,5 +132,13 @@ public class QuizTaker {
 		return nameAndScore;
 
 	}
+
+	/**
+	 * Get the number of scores the quiz taker has to his/her name
+	 */
+	public int getNumberOfScores() {
+		return myScores.size();
+	}
+
 }
 

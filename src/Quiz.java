@@ -7,7 +7,6 @@ import java.util.*;
 public class Quiz extends QuestionBank{
     int score = 0;
     String name;
-    QuizTaker currentPlayer;
     Scanner reader = new Scanner(System.in);
 
     /**
@@ -35,6 +34,8 @@ public class Quiz extends QuestionBank{
             myQuestion.seeCorrectOption();
         }
 
+        System.out.println("Your score for this run: " + score);
+        System.out.println();
         //adds the name and the score to the score.txt file
         currentPlayer.addScore(score);
         currentPlayer.addNewPlayer(name, score);

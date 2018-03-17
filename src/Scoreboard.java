@@ -1,25 +1,27 @@
+
+
 import java.io.File;
 import java.util.*;
 import java.util.Collections;
 
 /**
- * class ScoreBoard - creates a score board to hold all of the scores of
+ * class Scoreboard - creates a score board to hold all of the scores of
  * QuizTakers
- * 
+ *
  * @author Edward Phan, Tommy Vo Tran
  *
  */
-public class ScoreBoard {
+public class Scoreboard {
 	private ArrayList<QuizTaker> scoreBoard = new ArrayList<QuizTaker>();
 
 	/**
-	 * Constructor ScoreBoard - sets the scoreBoard arraylist with QuizTakers from
-	 * the file "Scores.txt"
+	 * Constructor Scoreboard - sets the scoreBoard arraylist with QuizTakers from
+	 * the file "scores.txt"
 	 */
-	public ScoreBoard() {
+	public Scoreboard() {
 		try {
 
-			Scanner reader = new Scanner(new File("Scores.txt"));
+			Scanner reader = new Scanner(new File("data/scores.txt"));
 
 			while (reader.hasNext()) {
 				String name = reader.next();
@@ -78,8 +80,7 @@ public class ScoreBoard {
 			}
 		}
 
-		System.out.println("\nHIGEST QUIZ SCORER:");
+		System.out.println("\nHIGHEST QUIZ SCORER:");
 		System.out.println(scoreBoard.get(0).getName() + " " + scoreBoard.get(0).getScore(0));
 	}
-
 }

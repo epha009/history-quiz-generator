@@ -1,19 +1,18 @@
-
 import java.io.*;
 import java.util.*;
 
 
 /**
- * 
+ *
  * @author Edward Phan, Tommy Vo Tran
- * 
+ *
  */
 /**
  * Class QuizTaker - creates an object for each person that takes the test
  */
 public class QuizTaker {
 	private String name;
-	private ArrayList<Integer> score = new ArrayList<Integer>(5);
+	private ArrayList<Integer> myScores = new ArrayList<Integer>(5); //an ArrayList representing the scores to the player's name
 
 	/**
 	 * default constructor
@@ -23,51 +22,52 @@ public class QuizTaker {
 	}
 
 	/**
-	 * 
-	 * @param testQuizName
-	 *            - the test takers name
+	 * Constructor to make a virtual representation of a quiz taker
+	 *
+	 * @param name
+	 *            - the quiz taker's name
 	 * @param points
-	 *            - amount of points test taker scored
+	 *            - amount of points quiz taker has scored
 	 */
-	public QuizTaker(String testTakerName, int points) {
-		name = testTakerName;
-		score.add(points);
+	public QuizTaker(String name, int points) {
+		this.name = name;
+		myScores.add(points);
 	}
 
 	/**
-	 * method getName - getter method for the name variable
-	 * 
-	 * @return - TestTaker's name
+	 * Getter method for the name variable
+	 *
+	 * @return - quiz taker's name
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * method getScore - gets a score from a certain index from the QuizTakers list
+	 * Gets a myScores from a certain index from the quiz taker's list
 	 * of scores
-	 * 
+	 *
 	 * @param index
-	 *            - the score that you would like to get
-	 * @return - the score at the certain index of the QuizTaker
+	 *            - the myScores that you would like to get
+	 * @return - the myScores at the certain index of the QuizTaker
 	 */
 	public int getScore(int index) {
-		return score.get(index);
+		return myScores.get(index);
 	}
 
 	/**
-	 * method getScore - a overridden class to get the array of scores of the
-	 * QuizTaker
-	 * 
-	 * @return the array of scores of the QuizTaker
+	 * method getMyScores - a overridden class to get the array of scores of the
+	 * QuizTaker //TODO: More accurate documentation
+	 *
+	 * @return the ArrayList of scores of the quiz taker
 	 */
-	public ArrayList<Integer> getScore() {
-		return score;
+	public ArrayList<Integer> getMyScores() {
+		return myScores;
 	}
 
 	/**
-	 * method setName - setter method to set the name of the TestTaker
-	 * 
+	 * Setter method to set the name of the quiz taker
+	 *
 	 * @param takerName
 	 *            - what the name will be changed to
 	 */
@@ -76,37 +76,37 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method setScore - setter method to set the score of the TestTaker
-	 * 
+	 * Setter method to set a specific score of the quiz taker
+	 *
 	 * @param points
 	 *            - what the points will be changed to
 	 */
 	public void setScore(int points, int index) {
-		score.set(index, points);
+		myScores.set(index, points);
 	}
 
 	/**
-	 * method addScore - adds a score to the QuizTakers list of scores
-	 * 
-	 * @param point
-	 *            - the score you want to add
+	 * method addScore - adds a score to the quiz taker's list of scores
+	 *
+	 * @param points
+	 *            - the score
 	 */
-	public void addScore(int point) {
-		score.add(point);
+	public void addScore(int points) {
+		myScores.add(points);
 	}
 
 	/**
-	 * method addNewPlayer - adds the name and the score of the QuizTaker to the
+	 * Writes the name and the score of the quiz taker to the
 	 * file to store the information
-	 * 
+	 *
 	 * @param name
 	 *            - the name of the player
 	 * @param score
-	 *            - the score that the player got on one of the Quiz runs
+	 *            - the myScores that the player got on one of the Quiz runs
 	 */
 	public void addNewPlayer(String name, int score) {
 		try {
-			FileWriter writer = new FileWriter("Scores.txt", true);
+			FileWriter writer = new FileWriter("data/scores.txt", true);
 
 			writer.write(name + "\n");
 			writer.write(score + "\n\n");
@@ -118,12 +118,14 @@ public class QuizTaker {
 	}
 
 	/**
-	 * method toString - prints out QuizTaker in correct format
+	 * String representation of quiz taker object
+	 *
+	 * @return name and scores of this quiz taker
 	 */
 
 	public String toString() {
 		String nameAndScore = name;
-		for (int i = 0; i < 5 && i < score.size(); i++) {
+		for (int i = 0; i < 5 && i < myScores.size(); i++) {
 			nameAndScore += " " + getScore(i);
 		}
 
@@ -131,3 +133,4 @@ public class QuizTaker {
 
 	}
 }
+

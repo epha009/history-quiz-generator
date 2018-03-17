@@ -27,7 +27,7 @@ public class Question {
 
         //go through the file and parse the contents of that line into String ask
         try {
-            Scanner in = new Scanner(new File("questions.txt"));
+            Scanner in = new Scanner(new File("data/questions.txt"));
             int lineAboutToBeRead = 0;
             while (in.hasNext() && indexOfAsk > lineAboutToBeRead) {
                 in.nextLine();
@@ -113,6 +113,7 @@ public class Question {
         Scanner in = new Scanner(System.in);
         String userInput = in.next();
         char userAnswer = userInput.charAt(0);
+        System.out.println("--------------------");
         if(correctOption == userAnswer) {
             System.out.println("You are correct!");
             return true;
@@ -128,8 +129,10 @@ public class Question {
      * Prints the correct option along with the explanations.
      */
     public void seeCorrectOption() {
+
         System.out.print("The correct option was: ");
         System.out.println(correctOption);
+        System.out.println("--------------------");
         System.out.println(tempA);
         System.out.println(tempB);
         System.out.println(tempC);

@@ -11,7 +11,8 @@ import java.util.*;
  */
 public class QuizTaker {
 	private String name;
-	// an ArrayList representing the scores to the player's name
+
+	// an ArrayList representing the scores to the quiz taker's name
 	private ArrayList<Comparable> myScores = new ArrayList<Comparable>(5);
 
 	/**
@@ -44,19 +45,18 @@ public class QuizTaker {
 	}
 
 	/**
-	 * Gets a score from a certain index from the quiz taker's list of scores
+	 * Gets the score from a specified index of the quiz taker's list of scores
 	 *
 	 * @param index
-	 *            - the myScores that you would like to get
-	 * @return - the myScores at the certain index of the QuizTaker
+	 *            - the index of the score desired
+	 * @return the score at that index
 	 */
 	public Comparable getScore(int index) {
 		return myScores.get(index);
 	}
 
 	/**
-	 * method getMyScores - a overridden class to get the entire array of scores of
-	 * the QuizTaker
+	 * Get the entire array of scores of the quiz taker
 	 *
 	 * @return the ArrayList of scores of the quiz taker
 	 */
@@ -77,7 +77,7 @@ public class QuizTaker {
 	/**
 	 * Setter method to set a specific score of the quiz taker
 	 *
-	 * 
+	 *
 	 * @param points
 	 *            - what the points will be changed to
 	 * @param index
@@ -103,11 +103,11 @@ public class QuizTaker {
 	 * information
 	 *
 	 * @param name
-	 *            - the name of the player
+	 *            - the name of the quiz taker
 	 * @param score
-	 *            - the myScores that the player got on one of the Quiz runs
+	 *            - the score that the quiz taker just got
 	 */
-	public void addNewPlayer(String name, int score) {
+	public void addNewTaker(String name, int score) {
 		try {
 			FileWriter writer = new FileWriter("scores.txt", true);
 
@@ -123,8 +123,8 @@ public class QuizTaker {
 	/**
 	 * method getNumberOfScores - Get the number of scores the quiz taker has to
 	 * his/her name
-	 * 
-	 * @return the number of scores within the QuizTaker's score arraylist
+	 *
+	 * @return the number of scores this quiz taker has received
 	 */
 	public int getNumberOfScores() {
 		return myScores.size();

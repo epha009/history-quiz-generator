@@ -14,7 +14,7 @@ Edward
 1
 
 Edward
-2
+4
 
 Tommy
 2
@@ -26,13 +26,13 @@ Tommy
 0
 
 Tommy
-2
+4
 
-Tommmy
+Tommy
 1
 
 Tommy
-2
+4
 
 Tommy
 4

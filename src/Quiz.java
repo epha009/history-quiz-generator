@@ -38,7 +38,7 @@ public class Quiz extends QuestionBank{
         System.out.println();
         //adds the name and the score to the score.txt file
         currentPlayer.addScore(score);
-        currentPlayer.addNewPlayer(name, score);
+        currentPlayer.addNewTaker(name, score);
 
         //creates and prints the scoreboard
         Scoreboard scoreBoard = new Scoreboard();

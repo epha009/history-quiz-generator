@@ -3,9 +3,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * @author Tommy Vo Tran
+ *
+ * Class simulates a question that can be asked, responded to in multiple choice, and deliver the correct answer and explanations.
+ */
 public class Question {
     
-    //TODO: Consider making an Option class to prevent code repeat
+
     private String ask;
     private char correctOption;
     private String tempA;

@@ -11,13 +11,13 @@ import java.util.Scanner;
 public class Question {
     
 
-    private String ask;
-    private char correctOption;
-    private String tempA;
+    private String ask; //the actual question to be asked
+    private char correctOption; //correct answer
+    private String tempA; //Next 4 are the answer options plus explanations
     private String tempB;
     private String tempC;
     private String tempD;
-    private String optionA;
+    private String optionA; //Next 4 are the answer options without explanations
     private String optionB;
     private String optionC;
     private String optionD;
@@ -116,7 +116,7 @@ public class Question {
         System.out.println(optionD);
         System.out.print("Choose answer (A, B, C, D): ");
         Scanner in = new Scanner(System.in);
-        String userInput = in.next();
+        String userInput = in.next().toUpperCase();
         char userAnswer = userInput.charAt(0);
         System.out.println("--------------------");
         if(correctOption == userAnswer) {

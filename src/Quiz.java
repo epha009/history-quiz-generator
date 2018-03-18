@@ -2,7 +2,9 @@
 import java.util.*;
 
 /**
- * Class extends a bank of questions to a full-fledged quiz
+ *
+ * @author Tommy Vo Tran
+ * Class extends a bank of questions to a full-fledged quiz, capable of keeping score and printing scores.
  */
 public class Quiz extends QuestionBank{
     int score = 0;
@@ -10,7 +12,7 @@ public class Quiz extends QuestionBank{
     Scanner reader = new Scanner(System.in);
 
     /**
-     *Constructor Quiz - runs the quiz once
+     *Constructor to make the quiz, ask questions, then print scores.
      */
     public Quiz() {
         super();

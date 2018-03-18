@@ -78,11 +78,8 @@ public class Scoreboard {
     public String findHighestScorers() {
         ArrayList<String> names = new ArrayList<String>();
         String theirNames = "";
-
         int highest = findHighestScore();
-
         for (int i = 0; i < myScoreboard.size(); i++) {
-
 
             if (myScoreboard.get(i).getScore(0).compareTo(highest) == 0) {
                 //note that each quiz taker's arraylist of scores is already sorted in descending order post-constructor
@@ -98,9 +95,6 @@ public class Scoreboard {
                 }
             }
         }
-
-
-
         return theirNames;
     }
 

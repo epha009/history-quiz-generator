@@ -28,15 +28,15 @@ public class Scoreboard {
                 int score = reader.nextInt();
 
                 QuizTaker taker = new QuizTaker(name, score);
-                allQuizTakers.add(taker); //Add this new QuizTaker to the Scoreboard *NOTE1
+                allQuizTakers.add(taker); //Add this new QuizTaker to the ArrayList of QuizTakers *NOTE1
 
-                //If the QuizTaker already exists in the Scoreboard, then his/her new score is added to that QuizTaker
+                //If the QuizTaker's name already exists in the ArrayList of QuizTakers, then their new score is added to that QuizTaker
                 for (int i = 0; i < allQuizTakers.size() - 1; i++) {
-                    if (allQuizTakers.get(i).getName().equals(taker.getName())) { //If name has already been found
-                        allQuizTakers.get(i).addScore(score);
-                        Sorter.quickSort(allQuizTakers.get(i).getMyScores(), 0,
+                    if (allQuizTakers.get(i).getName().equals(taker.getName())) { //If name is found
+                        allQuizTakers.get(i).addScore(score); //Add this new score to the pre-existing QuizTaker's ArrayList of scores
+                        Sorter.quickSort(allQuizTakers.get(i).getMyScores(), 0, //Sort all the scores of the QuizTaker
                                 allQuizTakers.get(i).getMyScores().size() - 1);
-                        allQuizTakers.remove(allQuizTakers.size() - 1); //Remove the new QuizTaker object at NOTE1 to prevent duplicates
+                        allQuizTakers.remove(allQuizTakers.size() - 1); //Remove the new QuizTaker object made at NOTE1 to prevent duplicates
                     }
                 }
 

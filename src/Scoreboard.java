@@ -7,15 +7,15 @@ import java.util.Scanner;
  * @author Edward Phan
  */
 /**
- * class Scoreboard - creates a score board to hold all of the scores of
- * QuizTakers
+ * class Scoreboard - creates a score board to hold and print scores of quiz takers
  */
 public class Scoreboard {
+
     //ArrayList of QuizTakers for the Scoreboard
-    private ArrayList<QuizTaker> myScoreboard = new ArrayList<QuizTaker>();
+    private ArrayList<QuizTaker> allQuizTakers = new ArrayList<QuizTaker>();
 
     /**
-     * Constructor Scoreboard - Fills the myScoreboard ArrayList with QuizTakers from
+     * Constructor Scoreboard - Fills the allQuizTakers ArrayList with QuizTakers from
      * the file "scores.txt"
      */
     public Scoreboard() {
@@ -28,15 +28,15 @@ public class Scoreboard {
                 int score = reader.nextInt();
 
                 QuizTaker taker = new QuizTaker(name, score);
-                myScoreboard.add(taker); //Add this new QuizTaker to the Scoreboard *NOTE1
+                allQuizTakers.add(taker); //Add this new QuizTaker to the Scoreboard *NOTE1
 
                 //If the QuizTaker already exists in the Scoreboard, then his/her new score is added to that QuizTaker
-                for (int i = 0; i < myScoreboard.size() - 1; i++) {
-                    if (myScoreboard.get(i).getName().equals(taker.getName())) { //If name has already been found
-                        myScoreboard.get(i).addScore(score);
-                        Sorter.quickSort(myScoreboard.get(i).getMyScores(), 0,
-                                myScoreboard.get(i).getMyScores().size() - 1);
-                        myScoreboard.remove(myScoreboard.size() - 1); //Remove the new QuizTaker object at NOTE1 to prevent duplicates
+                for (int i = 0; i < allQuizTakers.size() - 1; i++) {
+                    if (allQuizTakers.get(i).getName().equals(taker.getName())) { //If name has already been found
+                        allQuizTakers.get(i).addScore(score);
+                        Sorter.quickSort(allQuizTakers.get(i).getMyScores(), 0,
+                                allQuizTakers.get(i).getMyScores().size() - 1);
+                        allQuizTakers.remove(allQuizTakers.size() - 1); //Remove the new QuizTaker object at NOTE1 to prevent duplicates
                     }
                 }
 
@@ -58,10 +58,10 @@ public class Scoreboard {
      */
     public int findHighestScore() {
         int highest = 0;
-        for (int i = 0; i < myScoreboard.size(); i++) {
+        for (int i = 0; i < allQuizTakers.size(); i++) {
 
-            if (myScoreboard.get(i).getScore(0).compareTo(highest) > 0) {
-                highest = (int) myScoreboard.get(i).getScore(0);
+            if (allQuizTakers.get(i).getScore(0).compareTo(highest) > 0) {
+                highest = (int) allQuizTakers.get(i).getScore(0);
             }
 
         }
@@ -79,19 +79,19 @@ public class Scoreboard {
         ArrayList<String> names = new ArrayList<String>();
         String theirNames = "";
         int highest = findHighestScore();
-        for (int i = 0; i < myScoreboard.size(); i++) {
+        for (int i = 0; i < allQuizTakers.size(); i++) {
 
-            if (myScoreboard.get(i).getScore(0).compareTo(highest) == 0) {
+            if (allQuizTakers.get(i).getScore(0).compareTo(highest) == 0) {
                 //note that each quiz taker's arraylist of scores is already sorted in descending order post-constructor
                 boolean alreadyThere = false;
                 for(String name: names) {
-                    if(name.equals(myScoreboard.get(i).getName())) {
+                    if(name.equals(allQuizTakers.get(i).getName())) {
                         alreadyThere = true;
                     }
                 }
                 if (!alreadyThere) {
-                    theirNames += myScoreboard.get(i).getName() + " ";
-                    names.add(myScoreboard.get(i).getName());
+                    theirNames += allQuizTakers.get(i).getName() + " ";
+                    names.add(allQuizTakers.get(i).getName());
                 }
             }
         }
@@ -112,9 +112,9 @@ public class Scoreboard {
 
         // prints out the current quiz taker's name and top 5 highest scores in
         // descending order
-        for (int i = 0; i < myScoreboard.size() && myScoreboard.size() > 0; i++) {
-            if (myScoreboard.get(i).getName().equals(currentPlayerName)) {
-                System.out.println(myScoreboard.get(i).toString());
+        for (int i = 0; i < allQuizTakers.size() && allQuizTakers.size() > 0; i++) {
+            if (allQuizTakers.get(i).getName().equals(currentPlayerName)) {
+                System.out.println(allQuizTakers.get(i).toString());
                 break;
             }
         }

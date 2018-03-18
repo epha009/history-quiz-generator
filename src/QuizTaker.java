@@ -109,7 +109,7 @@ public class QuizTaker {
 	 */
 	public void addNewTaker(String name, int score) {
 		try {
-			FileWriter writer = new FileWriter("scores.txt", true);
+			FileWriter writer = new FileWriter("data/scores.txt", true);
 
 			writer.write(name + "\n");
 			writer.write(score + "\n\n");
